@@ -1,0 +1,17 @@
+---
+name: Redis
+description: Test template
+keywords: ''
+type: Default
+documentation: ''
+images:
+- name: dockerfile_redis_latest
+  source: dockerfile/redis:latest
+  type: Default
+  ports:
+  - host_port: '6379'
+    container_port: '6379'
+    proto: TCP
+  environment:
+  - variable: SERVICE_NAME
+    value: redis
